@@ -1,6 +1,7 @@
 {
-	"name": "radical-mart/libphonenumber",
+	"name": "radicalmart/libphonenumber",
 	"type": "library",
+	"description": "Библиотека для разбора, форматирования и проверки международных телефонных номеров.",
 	"authors": [
 		{
 			"name": "Artem Vasilev",
@@ -8,9 +9,11 @@
 			"role": "Developer"
 		}
 	],
+	"homepage": "https://github.com/RadicalMart/lib_phonenumber",
+	"license": "Apache-2.0",
 	"support": {
-		"issues": "https://github.com/Radical-Mart/lib_phonenumber/issues",
-		"source": "https://github.com/Radical-Mart/lib_phonenumber"
+		"issues": "https://github.com/RadicalMart/lib_phonenumber/issues",
+		"source": "https://github.com/RadicalMart/lib_phonenumber"
 	},
 	"autoload": {
 		"psr-4": {
@@ -21,5 +24,13 @@
 	"require": {
 		"php": ">=7.3.0",
 		"giggsey/libphonenumber-for-php": "^8.12"
+	},
+	"archive": {
+		"exclude": [
+			".github/",
+			".editorconfig",
+			".gitattributes",
+			".gitignore"
+		]
 	}
 }

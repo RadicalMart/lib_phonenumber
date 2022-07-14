@@ -6,7 +6,7 @@
 ## Установка
 
 ```bash
-$ composer require radical-mart/libphonenumber
+$ composer require radicalmart/libphonenumber
 ```
 
 ## Применение
