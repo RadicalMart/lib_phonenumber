@@ -1,0 +1,25 @@
+{
+	"name": "radical-mart/libphonenumber",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Artem Vasilev",
+			"homepage": "https://webmasterskaya.xyz",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"issues": "https://github.com/Radical-Mart/lib_phonenumber/issues",
+		"source": "https://github.com/Radical-Mart/lib_phonenumber"
+	},
+	"autoload": {
+		"psr-4": {
+			"RadicalMart\\PhoneNumber\\": "src/"
+		}
+	},
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=7.3.0",
+		"giggsey/libphonenumber-for-php": "^8.12"
+	}
+}
