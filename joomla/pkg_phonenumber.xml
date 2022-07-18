@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="package" method="upgrade">
+	<name>PKG_PHONENUMBER</name>
+	<packagename>phonenumber</packagename>
+	<author>Artem Vasilev - RadicalMart</author>
+	<authorEmail>dev@webmasterskaya.xyz</authorEmail>
+	<authorUrl>https://webmasterskaya.xyz</authorUrl>
+	<creationDate>July 2022</creationDate>
+	<copyright>Copyright (C) 2020 Webmasterskaya. All rights reserved.</copyright>
+	<license>Apache License 2.0; see LICENSE file</license>
+	<version>__DEPLOY_VERSION__</version>
+	<description>PKG_PHONENUMBER_XML_DESCRIPTION</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/pkg_phonenumber.sys.ini</language>
+		<language tag="ru-RU">ru-RU/pkg_phonenumber.sys.ini</language>
+	</languages>
+
+	<files>
+		<folder type="library" id="lib_phonenumber">library</folder>
+		<folder type="plugin" group="system" id="phonenumber">plugin</folder>
+	</files>
+</extension>
