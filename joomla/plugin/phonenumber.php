@@ -11,7 +11,6 @@ class PlgSystemPhonenumber extends CMSPlugin
 	 * Load the language file on instantiation.
 	 *
 	 * @var    boolean
-	 * @since  __DEPLOY_VERSION__
 	 */
 	protected $autoloadLanguage = true;
 
