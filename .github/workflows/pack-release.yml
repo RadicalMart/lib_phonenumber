@@ -1,0 +1,55 @@
+name: Create package for install to Joomla
+
+on:
+  release:
+    types: [ published ]
+
+jobs:
+
+  createReleasePackage:
+
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install git zip unzip curl jq -y
+
+      - name: Setup PHP with PECL extension
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          tools: composer
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "::set-output name=dir::$(composer config cache-files-dir)"
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install composer dependencies from source
+        run: composer install --prefer-source --no-dev --no-progress --optimize-autoloader
+
+      - name: Setup run permissions
+        run: sudo chmod +x ./joomla/build.sh
+
+      - name: Run build script
+        run: |
+          export TERM=xterm
+          ./joomla/build.sh
+          ls -l
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifact
+          path: ./joomla/pkg_phonenumber.zip
