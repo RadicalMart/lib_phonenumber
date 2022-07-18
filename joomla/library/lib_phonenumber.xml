@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.9"  type="library" method="upgrade">
 	<name>LIB_PHONENUMBER</name>
-	<libraryname>phonenumber</libraryname>
+	<libraryname>libphonenumber</libraryname>
 	<author>Artem Vasilev - RadicalMart</author>
 	<authorEmail>dev@webmasterskaya.xyz</authorEmail>
 	<authorUrl>https://webmasterskaya.xyz</authorUrl>
@@ -12,8 +12,8 @@
 	<description>LIB_PHONENUMBER_XML_DESCRIPTION</description>
 
 	<languages folder="language">
-		<language tag="en-GB">en-GB/lib_phonenumber.sys.ini</language>
-		<language tag="ru-RU">ru-RU/lib_phonenumber.sys.ini</language>
+		<language tag="en-GB">en-GB/lib_libphonenumber.sys.ini</language>
+		<language tag="ru-RU">ru-RU/lib_libphonenumber.sys.ini</language>
 	</languages>
 
 	<files>
