@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>PLG_SYSTEM_PHONENUMBER</name>
+	<author>Artem Vasilev - RadicalMart</author>
+	<authorEmail>dev@webmasterskaya.xyz</authorEmail>
+	<authorUrl>https://webmasterskaya.xyz</authorUrl>
+	<creationDate>July 2022</creationDate>
+	<copyright>Copyright (C) 2020 Webmasterskaya. All rights reserved.</copyright>
+	<license>Apache License 2.0; see LICENSE file</license>
+	<version>__DEPLOY_VERSION__</version>
+	<description>PLG_SYSTEM_PHONENUMBER_XML_DESCRIPTION</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/plg_system_phonenumber.ini</language>
+		<language tag="en-GB">en-GB/plg_system_phonenumber.sys.ini</language>
+		<language tag="ru-RU">ru-RU/plg_system_phonenumber.ini</language>
+		<language tag="ru-RU">ru-RU/plg_system_phonenumber.sys.ini</language>
+	</languages>
+
+	<files>
+		<filename plugin="phonenumber">phonenumber.php</filename>
+	</files>
+
+</extension>
