@@ -17,7 +17,7 @@ class PlgSystemPhonenumber extends CMSPlugin
 
 	public function onAfterInitialise()
 	{
-		if (!@include_once(JPATH_LIBRARIES . '/lib_phonenumber/vendor/autoload.php'))
+		if (!@include_once(JPATH_LIBRARIES . '/libphonenumber/vendor/autoload.php'))
 		{
 			throw new \RuntimeException(Text::_('PLG_SYSTEM_PHONENUMBER_ERROR_AUTOLOADER_NOT_LOAD'), 1);
 		}
