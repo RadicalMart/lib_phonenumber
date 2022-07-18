@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9"  type="library" method="upgrade">
+	<name>LIB_PHONENUMBER</name>
+	<libraryname>libphonenumber</libraryname>
+	<author>Artem Vasilev - RadicalMart</author>
+	<authorEmail>dev@webmasterskaya.xyz</authorEmail>
+	<authorUrl>https://webmasterskaya.xyz</authorUrl>
+	<creationDate>July 2022</creationDate>
+	<copyright>Copyright (C) 2022 RadicalMart. All rights reserved.</copyright>
+	<license>Apache License 2.0; see LICENSE file</license>
+	<version>1.1.0</version>
+	<description>LIB_PHONENUMBER_XML_DESCRIPTION</description>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/lib_libphonenumber.sys.ini</language>
+		<language tag="ru-RU">ru-RU/lib_libphonenumber.sys.ini</language>
+	</languages>
+
+	<files>
+		<folder>src</folder>
+		<folder>vendor</folder>
+		<filename>LICENSE</filename>
+	</files>
+
+</extension>

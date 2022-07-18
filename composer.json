@@ -30,7 +30,8 @@
 			".github/",
 			".editorconfig",
 			".gitattributes",
-			".gitignore"
+			".gitignore",
+			"joomla/"
 		]
 	}
 }
