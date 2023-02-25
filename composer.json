@@ -20,6 +20,11 @@
 			"RadicalMart\\PhoneNumber\\": "src/"
 		}
 	},
+	"autoload-dev": {
+		"psr-4": {
+			"RadicalMart\\PhoneNumber\\Tests\\": "tests/"
+		}
+	},
 	"minimum-stability": "stable",
 	"require": {
 		"php": ">=7.3.0",
@@ -31,7 +36,11 @@
 			".editorconfig",
 			".gitattributes",
 			".gitignore",
-			"joomla/"
+			"joomla/",
+			"tests/"
 		]
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9"
 	}
 }
