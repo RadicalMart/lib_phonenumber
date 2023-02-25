@@ -67,11 +67,11 @@ class PhoneNumber extends \libphonenumber\PhoneNumber
 	/**
 	 * Вернёт данные о привязке номера к региону
 	 *
-	 * @param   string|null  $language_code  Код языка, на котором будет выводиться информация о привязке номера к региону
+	 * @param string|null $language_code  Код языка, на котором будет выводиться информация о привязке номера к региону
 	 *
 	 * @return string
 	 */
-	public function geocode($language_code = null): string
+	public function geocode(string $language_code = null): string
 	{
 		if (empty($language_code))
 		{
@@ -84,11 +84,11 @@ class PhoneNumber extends \libphonenumber\PhoneNumber
 	/**
 	 * Вернёт данные о привязке номера к оператору связи
 	 *
-	 * @param   string|null  $language_code  Код языка, на котором будет выводиться информация о привязке номера к оператору связи
+	 * @param string|null $language_code  Код языка, на котором будет выводиться информация о привязке номера к оператору связи
 	 *
 	 * @return string
 	 */
-	public function carrier($language_code = null): string
+	public function carrier(string $language_code = null): string
 	{
 		if (empty($language_code))
 		{
