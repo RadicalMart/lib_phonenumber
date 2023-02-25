@@ -51,11 +51,17 @@
         "test-no-coverage": [
             "phpunit --color=always --no-coverage"
         ],
-        "cs-check": [
+        "cs": [
             "php-cs-fixer fix --ansi --dry-run --diff"
         ],
         "cs-fix": [
             "php-cs-fixer fix --ansi"
+        ],
+		"joomla-cs": [
+			"@cs --config=.php-cs-fixer.joomla.php"
+		],
+        "joomla-cs-fix": [
+            "@cs-fix --config=.php-cs-fixer.joomla.php"
         ]
     }
 }

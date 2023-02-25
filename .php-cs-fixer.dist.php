@@ -31,5 +31,11 @@ return (new PhpCsFixer\Config())
 		'ordered_imports' => [
 			'imports_order' => ['class', 'function', 'const'],
 		],
+		'concat_space' => ['spacing' => 'one'],
 		'single_import_per_statement' => true,
+		'native_function_invocation' => [
+			'include' => ['@compiler_optimized'],
+			'scope' => 'namespaced',
+			'strict' => true
+		],
 	]);
