@@ -2,7 +2,8 @@
 
 namespace RadicalMart\PhoneNumber\Exception;
 
-class InvalidRegionCodeException extends \RuntimeException
-{
+use RuntimeException;
 
+class InvalidRegionCodeException extends RuntimeException
+{
 }
