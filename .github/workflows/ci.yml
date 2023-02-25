@@ -15,9 +15,6 @@ jobs:
                     - "8.0"
                     - "8.1"
                     - "8.2"
-                include:
-                    -   php-version: 7.3
-                        ignore-platform-reqs: ignore-platform-reqs
 
         name: PHP ${{ matrix.php-version }}
 
@@ -43,12 +40,7 @@ jobs:
                     key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
                     restore-keys: ${{ runner.os }}-composer-
 
-            -   name: Install dependencies without platform reqs
-                if: "matrix.ignore-platform-reqs == 'ignore-platform-reqs'"
-                run: composer install --no-progress --prefer-dist --optimize-autoloader --ignore-platform-reqs
-
             -   name: Install dependencies
-                if: "matrix.ignore-platform-reqs != 'ignore-platform-reqs'"
                 run: composer install --no-progress --prefer-dist --optimize-autoloader
 
             -   name: Setup problem matchers for PHP
