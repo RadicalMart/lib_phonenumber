@@ -6,6 +6,7 @@ use libphonenumber\geocoding\PhoneNumberOfflineGeocoder;
 use libphonenumber\PhoneNumberFormat;
 use libphonenumber\PhoneNumberToCarrierMapper;
 use libphonenumber\PhoneNumberUtil;
+use RadicalMart\PhoneNumber\Exception\InvalidRegionCodeException;
 
 class PhoneNumber extends \libphonenumber\PhoneNumber
 {
@@ -47,7 +48,7 @@ class PhoneNumber extends \libphonenumber\PhoneNumber
 
 		if (!$this->phone_util->isValidNumber($this))
 		{
-			throw new \Exception('Phone number is invalid.');
+			throw new InvalidRegionCodeException();
 		}
 	}
 
