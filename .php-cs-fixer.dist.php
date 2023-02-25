@@ -3,8 +3,8 @@
 return (new PhpCsFixer\Config())
     ->setFinder(
         \Symfony\Component\Finder\Finder::create()
-            ->in(dirname(__FILE__) . './src')
-            ->in(dirname(__FILE__) . './tests')
+            ->in('src')
+            ->in('tests')
             ->name('*.php')
     )
     ->setRiskyAllowed(true)
