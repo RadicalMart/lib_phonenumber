@@ -26,11 +26,11 @@ class PhoneNumberTest extends TestCase
 
     public function setUp(): void
     {
-        $this->phoneNumberRU       = new PhoneNumber('9534368115');
+        $this->phoneNumberRU = new PhoneNumber('9534368115');
         $this->phoneNumberRUStatic = new PhoneNumber('88124445566');
-        $this->phoneNumberUA       = new PhoneNumber('0679998877', 'UA');
+        $this->phoneNumberUA = new PhoneNumber('0679998877', 'UA');
         $this->phoneNumberUAStatic = new PhoneNumber('0445554488', 'UA');
-        $this->phoneNumberDPR      = new PhoneNumber('9491312011');
+        $this->phoneNumberDPR = new PhoneNumber('9491312011');
     }
 
     public function testInvalidRegionCodeException()
@@ -48,7 +48,7 @@ class PhoneNumberTest extends TestCase
         ];
 
         $expected_results = [
-            'phoneNumberRU'       => [
+            'phoneNumberRU' => [
                 'Россия',
                 'Росія',
                 'Russia',
@@ -58,7 +58,7 @@ class PhoneNumberTest extends TestCase
                 'St Petersburg',
                 'St Petersburg',
             ],
-            'phoneNumberUA'       => [
+            'phoneNumberUA' => [
                 'Украина',
                 'Україна',
                 'Ukraine',
@@ -68,7 +68,7 @@ class PhoneNumberTest extends TestCase
                 'м. Київ',
                 'Kyiv city',
             ],
-            'phoneNumberDPR'      => [
+            'phoneNumberDPR' => [
                 'Россия',
                 'Росія',
                 'Russia',
@@ -92,7 +92,7 @@ class PhoneNumberTest extends TestCase
         ];
 
         $expected_results = [
-            'phoneNumberRU'       => [
+            'phoneNumberRU' => [
                 'Tele2',
                 'Tele2',
                 'Tele2',
@@ -102,7 +102,7 @@ class PhoneNumberTest extends TestCase
                 '',
                 '',
             ],
-            'phoneNumberUA'       => [
+            'phoneNumberUA' => [
                 'Kyivstar',
                 'Київстар',
                 'Kyivstar',
@@ -112,7 +112,7 @@ class PhoneNumberTest extends TestCase
                 '',
                 '',
             ],
-            'phoneNumberDPR'      => [
+            'phoneNumberDPR' => [
                 'АО ГЛОНАСС',
                 'GLONASS',
                 'GLONASS',
@@ -137,7 +137,7 @@ class PhoneNumberTest extends TestCase
         ];
 
         $expected_results = [
-            'phoneNumberRU'       => [
+            'phoneNumberRU' => [
                 '+79534368115',
                 '+7 953 436-81-15',
                 '8 (953) 436-81-15',
@@ -149,7 +149,7 @@ class PhoneNumberTest extends TestCase
                 '8 (812) 444-55-66',
                 'tel:+7-812-444-55-66',
             ],
-            'phoneNumberUA'       => [
+            'phoneNumberUA' => [
                 '+380679998877',
                 '+380 67 999 8877',
                 '067 999 8877',
@@ -161,7 +161,7 @@ class PhoneNumberTest extends TestCase
                 '044 555 4488',
                 'tel:+380-44-555-4488',
             ],
-            'phoneNumberDPR'      => [
+            'phoneNumberDPR' => [
                 '+79491312011',
                 '+7 949 131-20-11',
                 '8 (949) 131-20-11',
