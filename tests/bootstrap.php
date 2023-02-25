@@ -1,6 +1,6 @@
 <?php
 
-\ini_set('memory_limit', '1024M');
+ini_set('memory_limit', '1024M');
 
 $autoload = dirname(__FILE__, 2) . '/vendor/autoload.php';
 

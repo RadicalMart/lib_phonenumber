@@ -2,3 +2,7 @@
 /.gitattributes export-ignore
 /joomla export-ignore
 /tests export-ignore
+/.php-cs-fixer.dist.php export-ignore
+/.php-cs-fixer.joomla.php export-ignore
+/.editorconfig export-ignore
+/phpunit.xml.dist export-ignore

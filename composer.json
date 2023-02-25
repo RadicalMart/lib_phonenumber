@@ -15,21 +15,25 @@
         "issues": "https://github.com/RadicalMart/lib_phonenumber/issues",
         "source": "https://github.com/RadicalMart/lib_phonenumber"
     },
-    "autoload": {
-        "psr-4": {
-            "RadicalMart\\PhoneNumber\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "RadicalMart\\PhoneNumber\\Tests\\": "tests/"
-        }
-    },
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.3.0",
         "giggsey/libphonenumber-for-php": "^8.13"
     },
+	"require-dev": {
+		"phpunit/phpunit": "^9",
+		"friendsofphp/php-cs-fixer": "^3.14"
+	},
+	"autoload": {
+		"psr-4": {
+			"RadicalMart\\PhoneNumber\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"RadicalMart\\PhoneNumber\\Tests\\": "tests/"
+		}
+	},
     "archive": {
         "exclude": [
             ".github/",
@@ -37,12 +41,11 @@
             ".gitattributes",
             ".gitignore",
             "joomla/",
-            "tests/"
+            "tests/",
+			"phpunit.xml.dist",
+			".php-cs-fixer.joomla.php",
+			".php-cs-fixer.dist.php"
         ]
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^9",
-        "friendsofphp/php-cs-fixer": "^3.14"
     },
     "scripts": {
         "test": [
@@ -62,6 +65,11 @@
 		],
         "joomla-cs-fix": [
             "@cs-fix --config=.php-cs-fixer.joomla.php"
-        ]
+        ],
+		"check":[
+			"@cs",
+			"@joomla-cs",
+			"@test-no-coverage"
+		]
     }
 }
