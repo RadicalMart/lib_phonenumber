@@ -11,23 +11,17 @@ use RadicalMart\PhoneNumber\Exception\InvalidRegionCodeException;
 class PhoneNumber extends \libphonenumber\PhoneNumber
 {
 	/**
-	 * Код страны. Устанавливает правила разбора и форматирования номера телефона
-	 *
-	 * @var string
+	 * @var string Код страны. Устанавливает правила разбора и форматирования номера телефона
 	 */
 	protected $region;
 
 	/**
-	 * Код языка. Устанавливает код языка, на котором будет выводиться информация о номере телефона
-	 *
-	 * @var string
+	 * @var string Код языка. Устанавливает код языка, на котором будет выводиться информация о номере телефона
 	 */
 	protected $language_code;
 
 	/**
-	 * Экземпляр класса утилиты разбора номеров телефонов
-	 *
-	 * @var PhoneNumberUtil
+	 * @var PhoneNumberUtil Экземпляр класса утилиты разбора номеров телефонов
 	 */
 	protected $phone_util;
 
