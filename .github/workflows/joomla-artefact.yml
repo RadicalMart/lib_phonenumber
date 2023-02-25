@@ -40,7 +40,7 @@ jobs:
                 run: composer install --prefer-source --no-dev --no-progress --optimize-autoloader
 
             -   name: Setup package version in manifests
-                run: find ./joomla -type f -name '*.xml' -exec sed -i 's/RELEASE_VERSION/${{ github.ref }}/g' {} \;
+                run: find ./joomla -type f -name '*.xml' -exec sed -i 's/RELEASE_VERSION/${{ github.ref_name }}/g' {} \;
 
             -   name: Setup run permissions
                 run: sudo chmod +x ./joomla/build/build.sh
