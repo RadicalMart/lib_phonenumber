@@ -37,7 +37,7 @@ jobs:
                     restore-keys: ${{ runner.os }}-composer-
 
             -   name: Install composer dependencies from source
-                run: composer install --prefer-source --no-dev --no-progress --optimize-autoloader
+                run: composer install --prefer-dist --no-dev --no-progress --optimize-autoloader
 
             -   name: Setup package version in manifests
                 run: find ./joomla -type f -name '*.xml' -exec sed -i 's/RELEASE_VERSION/${{ github.ref_name }}/g' {} \;
