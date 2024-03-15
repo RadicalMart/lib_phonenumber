@@ -1,25 +1,25 @@
 {
-    "name": "radicalmart/libphonenumber",
-    "type": "library",
-    "description": "Библиотека для разбора, форматирования и проверки международных телефонных номеров.",
-    "authors": [
-        {
-            "name": "Artem Vasilev",
-            "homepage": "https://webmasterskaya.xyz",
-            "role": "Developer"
-        }
-    ],
-    "homepage": "https://github.com/RadicalMart/lib_phonenumber",
-    "license": "Apache-2.0",
-    "support": {
-        "issues": "https://github.com/RadicalMart/lib_phonenumber/issues",
-        "source": "https://github.com/RadicalMart/lib_phonenumber"
-    },
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=7.3.0",
-        "giggsey/libphonenumber-for-php": "8.13.7"
-    },
+	"name": "radicalmart/libphonenumber",
+	"type": "library",
+	"description": "Библиотека для разбора, форматирования и проверки международных телефонных номеров.",
+	"authors": [
+		{
+			"name": "Artem Vasilev",
+			"homepage": "https://webmasterskaya.xyz",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://github.com/RadicalMart/lib_phonenumber",
+	"license": "Apache-2.0",
+	"support": {
+		"issues": "https://github.com/RadicalMart/lib_phonenumber/issues",
+		"source": "https://github.com/RadicalMart/lib_phonenumber"
+	},
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=7.3.0",
+		"giggsey/libphonenumber-for-php": "^8.13.0"
+	},
 	"require-dev": {
 		"phpunit/phpunit": "^9",
 		"friendsofphp/php-cs-fixer": "v3.4.0"
@@ -34,42 +34,45 @@
 			"RadicalMart\\PhoneNumber\\Tests\\": "tests/"
 		}
 	},
-    "archive": {
-        "exclude": [
-            ".github/",
-            ".editorconfig",
-            ".gitattributes",
-            ".gitignore",
-            "joomla/",
-            "tests/",
+	"archive": {
+		"exclude": [
+			".github/",
+			".editorconfig",
+			".gitattributes",
+			".gitignore",
+			"joomla/",
+			"tests/",
 			"phpunit.xml.dist",
 			".php-cs-fixer.joomla.php",
 			".php-cs-fixer.dist.php"
-        ]
-    },
-    "scripts": {
-        "test": [
-            "phpunit --color=always"
-        ],
-        "test-no-coverage": [
-            "phpunit --color=always --no-coverage"
-        ],
-        "cs": [
-            "php-cs-fixer fix --ansi --dry-run --diff"
-        ],
-        "cs-fix": [
-            "php-cs-fixer fix --ansi"
-        ],
+		]
+	},
+	"scripts": {
+		"test": [
+			"phpunit --color=always"
+		],
+		"test-no-coverage": [
+			"phpunit --color=always --no-coverage"
+		],
+		"cs": [
+			"php-cs-fixer fix --ansi --dry-run --diff"
+		],
+		"cs-fix": [
+			"php-cs-fixer fix --ansi"
+		],
 		"joomla-cs": [
 			"@cs --config=.php-cs-fixer.joomla.php"
 		],
-        "joomla-cs-fix": [
-            "@cs-fix --config=.php-cs-fixer.joomla.php"
-        ],
-		"check":[
+		"joomla-cs-fix": [
+			"@cs-fix --config=.php-cs-fixer.joomla.php"
+		],
+		"check": [
 			"@cs",
 			"@joomla-cs",
 			"@test-no-coverage"
 		]
-    }
+	},
+	"config": {
+		"optimize-autoloader": true
+	}
 }
