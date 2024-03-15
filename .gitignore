@@ -5,5 +5,4 @@ joomla/library/vendor
 joomla/library/src
 joomla/library/LICENSE
 .phpunit.result.cache
-composer.lock
 .php-cs-fixer.cache
